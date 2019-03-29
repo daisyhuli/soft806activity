@@ -16,7 +16,7 @@ namespace game2
 
         class Game
         {
-            int lifes = 3;
+            int lives = 3;
             int currentRandom = -1;
             int level = 0;
           
@@ -82,7 +82,7 @@ namespace game2
             // reset some parameters
             public void Init()
             {
-                lifes = 3;
+                lives = 3;
                 currentRandom = -1;
                 level = 0;
             }
@@ -95,7 +95,7 @@ namespace game2
                     level = GetInput();
                     currentRandom = CreateRandom(level);
                 }
-                if (lifes > 0)
+                if (lives > 0)
                 {
                     int guess = GetInput("please enter a number", false);
                     if (guess == currentRandom)
@@ -106,8 +106,8 @@ namespace game2
                     }
                     else
                     {
-                        lifes--;
-                        Console.WriteLine("the number is too {0}, you have {1} lives",guess > currentRandom ? "big" : "small", lifes);
+                        lives--;
+                        Console.WriteLine("the number is too {0}, you have {1} chances",guess > currentRandom ? "big" : "small", lives);
                         Start();
                     }
                 }
