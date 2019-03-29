@@ -21,7 +21,7 @@ namespace game2
             int level = 0;
           
             //this function handles the input message
-            public int GetInput (string tips= "please enter game level between 1 and 3", bool limit = true)
+            public int GetInput (string tips= "please enter game level between 1 and 3: 1.1-10, 2. 1-20, 3.1-50", bool limit = true)
             {
                 Console.WriteLine(tips);
                 string level = Console.ReadLine();
